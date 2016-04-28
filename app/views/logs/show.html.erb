@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @log.address %>
+</p>
+<!--
+<p>
+  <strong>Total:</strong>
+  <%= @log.total %>
+</p>
+
+<p>
+  <strong>Discount:</strong>
+  <%= @log.discount %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @log.user %>
+</p>
+
+<p>
+  <strong>Ttd:</strong>
+  <%= @log.ttd %>
+</p>
+
+<p>
+  <strong>Otd:</strong>
+  <%= @log.otd %>
+</p>
+
+<p>
+  <strong>Tip:</strong>
+  <%= @log.tip %>
+</p>
+
+<p>
+  <strong>Web:</strong>
+  <%= @log.web %>
+</p>
+
+<p>
+  <strong>Cash:</strong>
+  <%= @log.cash %>
+</p>
+-->
+<%= link_to 'Shift', '/logs/index' %> 
+<%= link_to 'Edit', edit_log_path(@log) %> |
+<%= link_to 'Back', logs_path %>

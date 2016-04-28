@@ -1,0 +1,24 @@
+<h1>Update Delivery</h1>
+<%= link_to 'Show', @log %> |
+<%= link_to 'Back', logs_path %>
+
+
+<div class='wrapper'>
+<div class='post'>
+<%= render 'form' %>
+</div>
+
+
+ <form action="http://maps.google.com/maps" method="get" target="">
+   <label for="daddr">Enter Your Destination</label>
+   <input type="text" name="daddr" />
+   <input type="hidden" name="saddr" value="1052 Peachtree Industrial Blvd Suwanee, GA 30518" />
+   <input type="submit" value="Get directions" />
+</form>
+
+<div class='post'>
+<%= render 'mapping' %>
+</div>
+
+</div>
+</br>

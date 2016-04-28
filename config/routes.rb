@@ -2,9 +2,16 @@ Rails.application.routes.draw do
 
   
 
+  resources :logs
   get 'signup'  => 'users#new'
 
-
+  get 'showShift'   => 'logs#index'
+  
+  get 'newEntry' => 'logs#new'
+  
+  get 'shift'   => 'logs#index'
+  
+  get 'options' => 'shift_pages#options'
 
   root             'static_pages#home'
   

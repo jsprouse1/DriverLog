@@ -1,0 +1,6 @@
+<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+<div style='overflow:hidden;height:400px;width:520px;'>
+    <div id='gmap_canvas' style='height:400px;width:520px;'></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div>
+    
+    <a href='https://embedmap.org/'>adding a google map to website</a> <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=c2a0792bea17674074d648ce178c715dd4dd05a7'></script>
+    <script type='text/javascript'>function init_map(){var myOptions = {zoom:12,center:new google.maps.LatLng(34.050063,-84.09011989999999),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(34.050063,-84.09011989999999)});infowindow = new google.maps.InfoWindow({content:'<strong>Delivery Area</strong><br>1052 Peachtree Industrial<br>30024 Suwanee<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>

@@ -3,6 +3,7 @@
 
 /* universal */
 
+
 $light-gray: #777;
 $gray-medium-light: #eaeaea;
 
@@ -13,7 +14,12 @@ $gray-medium-light: #eaeaea;
 }
 
 body {
+ 
   padding-top: 60px;
+}
+
+.container {
+   background-color: lightgrey;
 }
 
 section {
@@ -29,6 +35,20 @@ textarea {
   h1 {
     margin-bottom: 10px;
   }
+}
+
+table, th, td {
+    border: 1px solid black;
+     padding: 8px;
+}
+.wrapper .post {
+-moz-border-radius:7px 7px 7px 7px;
+border:1px solid silver;
+float:left;
+margin:10px;
+min-height:100px;
+padding:5px;
+width:200px;
 }
 
 /* typography */

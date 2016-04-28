@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Shift Logs</h1>
+
+<table cellpadding="101", cellspacing="110">
+  <thead >
+    <tr>
+      <th>Address</th>
+       <td>Total</th>
+      <th>Discount</th>
+      <th>Ttd</th>
+      <th>Otd</th>
+      <th>Tip</th>
+      <th>Web</th>
+      <th>Cash</th>
+      <th>Avg Tip</th>
+      <th>Created</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @logs.each do |log| %>
+      <tr>
+        <td><%= log.address %></td>
+        <td><%= log.total %></td>
+        <td><%= log.discount %></td>
+        <td><%= log.ttd %></td>
+        <td><%= log.otd %></td>
+        <td><%= log.tip %></td>
+        <td><%= log.web %></td>
+        <td><%= log.cash %></td>
+        <td><%= @logs.where(address: log.address).average(:tip) %> </td>
+        <td><%= log.created_at %></td>
+        
+        <td><%= link_to 'Show', log %></td>
+        <td><%= link_to 'Edit', edit_log_path(log) %></td>
+        <td><%= link_to 'Destroy', log, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<h1>Cash Total <%= @total %></h1>
+<h1>Tip Total <%= @tip %></h1>
+<br>
+
+<%= link_to 'New Log', new_log_path %>
